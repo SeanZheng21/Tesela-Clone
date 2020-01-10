@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FFC863EF23C8635000EB40FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC863EE23C8635000EB40FC /* AppDelegate.swift */; };
+		FFC863F123C8635000EB40FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC863F023C8635000EB40FC /* SceneDelegate.swift */; };
+		FFC863F323C8635000EB40FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC863F223C8635000EB40FC /* ViewController.swift */; };
+		FFC863F623C8635000EB40FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC863F423C8635000EB40FC /* Main.storyboard */; };
+		FFC863F823C8635100EB40FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC863F723C8635100EB40FC /* Assets.xcassets */; };
+		FFC863FB23C8635100EB40FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC863F923C8635100EB40FC /* LaunchScreen.storyboard */; };
+		FFC8640623C8635200EB40FC /* TeaselaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC8640523C8635200EB40FC /* TeaselaTests.swift */; };
+		FFC8641123C8635200EB40FC /* TeaselaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC8641023C8635200EB40FC /* TeaselaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FFC8640223C8635200EB40FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFC863E323C8635000EB40FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFC863EA23C8635000EB40FC;
+			remoteInfo = Teasela;
+		};
+		FFC8640D23C8635200EB40FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFC863E323C8635000EB40FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFC863EA23C8635000EB40FC;
+			remoteInfo = Teasela;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FFC863EB23C8635000EB40FC /* Teasela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teasela.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC863EE23C8635000EB40FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FFC863F023C8635000EB40FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FFC863F223C8635000EB40FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFC863F523C8635000EB40FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFC863F723C8635100EB40FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFC863FA23C8635100EB40FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFC863FC23C8635100EB40FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFC8640123C8635100EB40FC /* TeaselaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeaselaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC8640523C8635200EB40FC /* TeaselaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaselaTests.swift; sourceTree = "<group>"; };
+		FFC8640723C8635200EB40FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFC8640C23C8635200EB40FC /* TeaselaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeaselaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC8641023C8635200EB40FC /* TeaselaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaselaUITests.swift; sourceTree = "<group>"; };
+		FFC8641223C8635200EB40FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFC863E823C8635000EB40FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC863FE23C8635100EB40FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC8640923C8635200EB40FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FFC863E223C8635000EB40FC = {
+			isa = PBXGroup;
+			children = (
+				FFC863ED23C8635000EB40FC /* Teasela */,
+				FFC8640423C8635200EB40FC /* TeaselaTests */,
+				FFC8640F23C8635200EB40FC /* TeaselaUITests */,
+				FFC863EC23C8635000EB40FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFC863EC23C8635000EB40FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFC863EB23C8635000EB40FC /* Teasela.app */,
+				FFC8640123C8635100EB40FC /* TeaselaTests.xctest */,
+				FFC8640C23C8635200EB40FC /* TeaselaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFC863ED23C8635000EB40FC /* Teasela */ = {
+			isa = PBXGroup;
+			children = (
+				FFC863EE23C8635000EB40FC /* AppDelegate.swift */,
+				FFC863F023C8635000EB40FC /* SceneDelegate.swift */,
+				FFC863F223C8635000EB40FC /* ViewController.swift */,
+				FFC863F423C8635000EB40FC /* Main.storyboard */,
+				FFC863F723C8635100EB40FC /* Assets.xcassets */,
+				FFC863F923C8635100EB40FC /* LaunchScreen.storyboard */,
+				FFC863FC23C8635100EB40FC /* Info.plist */,
+			);
+			path = Teasela;
+			sourceTree = "<group>";
+		};
+		FFC8640423C8635200EB40FC /* TeaselaTests */ = {
+			isa = PBXGroup;
+			children = (
+				FFC8640523C8635200EB40FC /* TeaselaTests.swift */,
+				FFC8640723C8635200EB40FC /* Info.plist */,
+			);
+			path = TeaselaTests;
+			sourceTree = "<group>";
+		};
+		FFC8640F23C8635200EB40FC /* TeaselaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FFC8641023C8635200EB40FC /* TeaselaUITests.swift */,
+				FFC8641223C8635200EB40FC /* Info.plist */,
+			);
+			path = TeaselaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFC863EA23C8635000EB40FC /* Teasela */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFC8641523C8635200EB40FC /* Build configuration list for PBXNativeTarget "Teasela" */;
+			buildPhases = (
+				FFC863E723C8635000EB40FC /* Sources */,
+				FFC863E823C8635000EB40FC /* Frameworks */,
+				FFC863E923C8635000EB40FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Teasela;
+			productName = Teasela;
+			productReference = FFC863EB23C8635000EB40FC /* Teasela.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FFC8640023C8635100EB40FC /* TeaselaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFC8641823C8635200EB40FC /* Build configuration list for PBXNativeTarget "TeaselaTests" */;
+			buildPhases = (
+				FFC863FD23C8635100EB40FC /* Sources */,
+				FFC863FE23C8635100EB40FC /* Frameworks */,
+				FFC863FF23C8635100EB40FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFC8640323C8635200EB40FC /* PBXTargetDependency */,
+			);
+			name = TeaselaTests;
+			productName = TeaselaTests;
+			productReference = FFC8640123C8635100EB40FC /* TeaselaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FFC8640B23C8635200EB40FC /* TeaselaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFC8641B23C8635200EB40FC /* Build configuration list for PBXNativeTarget "TeaselaUITests" */;
+			buildPhases = (
+				FFC8640823C8635200EB40FC /* Sources */,
+				FFC8640923C8635200EB40FC /* Frameworks */,
+				FFC8640A23C8635200EB40FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFC8640E23C8635200EB40FC /* PBXTargetDependency */,
+			);
+			name = TeaselaUITests;
+			productName = TeaselaUITests;
+			productReference = FFC8640C23C8635200EB40FC /* TeaselaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFC863E323C8635000EB40FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Carlistle ZHENG";
+				TargetAttributes = {
+					FFC863EA23C8635000EB40FC = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					FFC8640023C8635100EB40FC = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = FFC863EA23C8635000EB40FC;
+					};
+					FFC8640B23C8635200EB40FC = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = FFC863EA23C8635000EB40FC;
+					};
+				};
+			};
+			buildConfigurationList = FFC863E623C8635000EB40FC /* Build configuration list for PBXProject "Teasela" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFC863E223C8635000EB40FC;
+			productRefGroup = FFC863EC23C8635000EB40FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFC863EA23C8635000EB40FC /* Teasela */,
+				FFC8640023C8635100EB40FC /* TeaselaTests */,
+				FFC8640B23C8635200EB40FC /* TeaselaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFC863E923C8635000EB40FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFC863FB23C8635100EB40FC /* LaunchScreen.storyboard in Resources */,
+				FFC863F823C8635100EB40FC /* Assets.xcassets in Resources */,
+				FFC863F623C8635000EB40FC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC863FF23C8635100EB40FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC8640A23C8635200EB40FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFC863E723C8635000EB40FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFC863F323C8635000EB40FC /* ViewController.swift in Sources */,
+				FFC863EF23C8635000EB40FC /* AppDelegate.swift in Sources */,
+				FFC863F123C8635000EB40FC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC863FD23C8635100EB40FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFC8640623C8635200EB40FC /* TeaselaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC8640823C8635200EB40FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFC8641123C8635200EB40FC /* TeaselaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFC8640323C8635200EB40FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFC863EA23C8635000EB40FC /* Teasela */;
+			targetProxy = FFC8640223C8635200EB40FC /* PBXContainerItemProxy */;
+		};
+		FFC8640E23C8635200EB40FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFC863EA23C8635000EB40FC /* Teasela */;
+			targetProxy = FFC8640D23C8635200EB40FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FFC863F423C8635000EB40FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFC863F523C8635000EB40FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FFC863F923C8635100EB40FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFC863FA23C8635100EB40FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFC8641323C8635200EB40FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FFC8641423C8635200EB40FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFC8641623C8635200EB40FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C9Z965MBZG;
+				INFOPLIST_FILE = Teasela/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CarlistleZ.Teasela;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FFC8641723C8635200EB40FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C9Z965MBZG;
+				INFOPLIST_FILE = Teasela/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CarlistleZ.Teasela;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FFC8641923C8635200EB40FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C9Z965MBZG;
+				INFOPLIST_FILE = TeaselaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CarlistleZ.TeaselaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Teasela.app/Teasela";
+			};
+			name = Debug;
+		};
+		FFC8641A23C8635200EB40FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C9Z965MBZG;
+				INFOPLIST_FILE = TeaselaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CarlistleZ.TeaselaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Teasela.app/Teasela";
+			};
+			name = Release;
+		};
+		FFC8641C23C8635200EB40FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C9Z965MBZG;
+				INFOPLIST_FILE = TeaselaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CarlistleZ.TeaselaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Teasela;
+			};
+			name = Debug;
+		};
+		FFC8641D23C8635200EB40FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C9Z965MBZG;
+				INFOPLIST_FILE = TeaselaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CarlistleZ.TeaselaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Teasela;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFC863E623C8635000EB40FC /* Build configuration list for PBXProject "Teasela" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFC8641323C8635200EB40FC /* Debug */,
+				FFC8641423C8635200EB40FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFC8641523C8635200EB40FC /* Build configuration list for PBXNativeTarget "Teasela" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFC8641623C8635200EB40FC /* Debug */,
+				FFC8641723C8635200EB40FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFC8641823C8635200EB40FC /* Build configuration list for PBXNativeTarget "TeaselaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFC8641923C8635200EB40FC /* Debug */,
+				FFC8641A23C8635200EB40FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFC8641B23C8635200EB40FC /* Build configuration list for PBXNativeTarget "TeaselaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFC8641C23C8635200EB40FC /* Debug */,
+				FFC8641D23C8635200EB40FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFC863E323C8635000EB40FC /* Project object */;
+}
