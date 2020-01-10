@@ -31,10 +31,12 @@ class ClimateViewController: UIViewController {
     @IBOutlet weak var intTempLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var onOffButton: UIButton!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     // MARK: - Setters
     @IBAction func turnOnOffTouched(_ sender: UIButton) {
         setEnableControl(to: !enableClimateControl)
+        backgroundImageView.image = UIImage(named: "Climate Background" + (enableClimateControl ? " Enabled" : ""))
     }
     
     func setEnableControl(to enable: Bool) {
@@ -60,7 +62,7 @@ class ClimateViewController: UIViewController {
     
     private func setInteriorTemperature(to intTemp: Int) {
         interiorTemp = intTemp
-        intTempLabel.text = "\(intTemp)°F"
+        intTempLabel.text = "Interior \(intTemp)°F"
     }
     
 

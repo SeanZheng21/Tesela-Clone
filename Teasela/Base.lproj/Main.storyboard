@@ -542,6 +542,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="SCC-xh-tcq"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="jwm-YD-sl2" id="Xgh-GW-51H"/>
                         <outlet property="intTempLabel" destination="95s-Bg-hnj" id="b8j-hh-PW5"/>
                         <outlet property="onOffButton" destination="I2V-rw-cTk" id="kxh-Cb-x7y"/>
                         <outlet property="temperatureLabel" destination="EJ8-3C-nFW" id="fjK-dE-Cj8"/>
