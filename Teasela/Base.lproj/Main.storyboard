@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -199,6 +200,9 @@
                                                 <constraint firstItem="VfE-XF-R6s" firstAttribute="centerY" secondItem="KVe-Gz-joJ" secondAttribute="centerY" id="Wre-A3-MLf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="O35-aT-esi" kind="show" identifier="ClimateSegue" id="6r0-KQ-Usi"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="SMz-PF-8xj">
                                         <rect key="frame" x="0.0" y="574" width="414" height="70"/>
@@ -463,6 +467,90 @@
             </objects>
             <point key="canvasLocation" x="1992.753623188406" y="138.61607142857142"/>
         </scene>
+        <!--Climate View Controller-->
+        <scene sceneID="Cvl-4o-fWf">
+            <objects>
+                <viewController id="O35-aT-esi" userLabel="Climate View Controller" customClass="ClimateViewController" customModule="Teasela" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MNg-bD-AIB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Climate Background" translatesAutoresizingMaskIntoConstraints="NO" id="jwm-YD-sl2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="656"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="656" id="Pdq-Mv-XN9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interior 72°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95s-Bg-hnj">
+                                <rect key="frame" x="159.5" y="147.5" width="95" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="xWn-LC-1AI" userLabel="Adjustment Stack View">
+                                <rect key="frame" x="133.5" y="744" width="147" height="108"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NL2-sI-Q4i">
+                                        <rect key="frame" x="0.0" y="0.0" width="147" height="53"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YS1-L0-Ts9">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="53"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="touchMinusTemperature:" destination="O35-aT-esi" eventType="touchUpInside" id="VlE-Ud-76u"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJ8-3C-nFW">
+                                                <rect key="frame" x="38" y="0.0" width="71" height="53"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jt-yD-Y7U">
+                                                <rect key="frame" x="117" y="0.0" width="30" height="53"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="touchPlusTemperature:" destination="O35-aT-esi" eventType="touchUpInside" id="03I-Hw-Tyo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2V-rw-cTk">
+                                        <rect key="frame" x="37" y="70" width="73" height="38"/>
+                                        <state key="normal" title="TURN OFF"/>
+                                        <connections>
+                                            <action selector="turnOnOffTouched:" destination="O35-aT-esi" eventType="touchUpInside" id="pOd-hU-h9t"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jwm-YD-sl2" firstAttribute="top" secondItem="KH8-NH-l5j" secondAttribute="top" id="2U2-2f-1v1"/>
+                            <constraint firstItem="jwm-YD-sl2" firstAttribute="leading" secondItem="KH8-NH-l5j" secondAttribute="leading" id="Czi-Jy-REO"/>
+                            <constraint firstItem="xWn-LC-1AI" firstAttribute="top" secondItem="jwm-YD-sl2" secondAttribute="bottom" id="HUB-cf-kD5"/>
+                            <constraint firstItem="xWn-LC-1AI" firstAttribute="centerX" secondItem="MNg-bD-AIB" secondAttribute="centerX" id="LxP-Sf-DoK"/>
+                            <constraint firstItem="jwm-YD-sl2" firstAttribute="top" secondItem="95s-Bg-hnj" secondAttribute="bottom" constant="-80" id="Mqm-Kw-iyG"/>
+                            <constraint firstItem="95s-Bg-hnj" firstAttribute="centerX" secondItem="MNg-bD-AIB" secondAttribute="centerX" id="PvJ-CI-phf"/>
+                            <constraint firstItem="jwm-YD-sl2" firstAttribute="trailing" secondItem="KH8-NH-l5j" secondAttribute="trailing" id="cYD-GF-3RH"/>
+                            <constraint firstItem="KH8-NH-l5j" firstAttribute="bottom" secondItem="xWn-LC-1AI" secondAttribute="bottom" constant="10" id="i9o-u7-1O5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KH8-NH-l5j"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SCC-xh-tcq"/>
+                    <connections>
+                        <outlet property="intTempLabel" destination="95s-Bg-hnj" id="b8j-hh-PW5"/>
+                        <outlet property="onOffButton" destination="I2V-rw-cTk" id="kxh-Cb-x7y"/>
+                        <outlet property="temperatureLabel" destination="EJ8-3C-nFW" id="fjK-dE-Cj8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JrP-hm-9BJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2905.7971014492755" y="138.61607142857142"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="af9-AN-fmQ">
             <objects>
@@ -486,6 +574,7 @@
         <image name="Assistance" width="80" height="80"/>
         <image name="Charging" width="75" height="75"/>
         <image name="Climate" width="75" height="75"/>
+        <image name="Climate Background" width="674" height="1181"/>
         <image name="Controls" width="75" height="75"/>
         <image name="Location" width="75" height="75"/>
         <image name="Phone Key" width="75" height="75"/>

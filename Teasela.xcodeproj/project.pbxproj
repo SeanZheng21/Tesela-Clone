@@ -15,6 +15,7 @@
 		FFC8640623C8635200EB40FC /* TeaselaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC8640523C8635200EB40FC /* TeaselaTests.swift */; };
 		FFC8641123C8635200EB40FC /* TeaselaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC8641023C8635200EB40FC /* TeaselaUITests.swift */; };
 		FFC8641F23C86DEA00EB40FC /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC8641E23C86DEA00EB40FC /* RootTableViewController.swift */; };
+		FFC8642123C8829600EB40FC /* ClimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC8642023C8829600EB40FC /* ClimateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		FFC8641023C8635200EB40FC /* TeaselaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaselaUITests.swift; sourceTree = "<group>"; };
 		FFC8641223C8635200EB40FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFC8641E23C86DEA00EB40FC /* RootTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
+		FFC8642023C8829600EB40FC /* ClimateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				FFC863EE23C8635000EB40FC /* AppDelegate.swift */,
 				FFC863F023C8635000EB40FC /* SceneDelegate.swift */,
 				FFC863F423C8635000EB40FC /* Main.storyboard */,
+				FFC8642023C8829600EB40FC /* ClimateViewController.swift */,
 				FFC8641E23C86DEA00EB40FC /* RootTableViewController.swift */,
 				FFC863F723C8635100EB40FC /* Assets.xcassets */,
 				FFC863F923C8635100EB40FC /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFC8642123C8829600EB40FC /* ClimateViewController.swift in Sources */,
 				FFC863EF23C8635000EB40FC /* AppDelegate.swift in Sources */,
 				FFC863F123C8635000EB40FC /* SceneDelegate.swift in Sources */,
 				FFC8641F23C86DEA00EB40FC /* RootTableViewController.swift in Sources */,
