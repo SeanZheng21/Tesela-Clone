@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FF52DFAF23C895DE00765050 /* ControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52DFAE23C895DE00765050 /* ControlsViewController.swift */; };
+		FF52DFB123C8AEAD00765050 /* ChargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52DFB023C8AEAD00765050 /* ChargeViewController.swift */; };
 		FFC863EF23C8635000EB40FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC863EE23C8635000EB40FC /* AppDelegate.swift */; };
 		FFC863F123C8635000EB40FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC863F023C8635000EB40FC /* SceneDelegate.swift */; };
 		FFC863F623C8635000EB40FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC863F423C8635000EB40FC /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		FF52DFAE23C895DE00765050 /* ControlsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsViewController.swift; sourceTree = "<group>"; };
+		FF52DFB023C8AEAD00765050 /* ChargeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeViewController.swift; sourceTree = "<group>"; };
 		FFC863EB23C8635000EB40FC /* Teasela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teasela.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC863EE23C8635000EB40FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC863F023C8635000EB40FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				FFC863F023C8635000EB40FC /* SceneDelegate.swift */,
 				FFC863F423C8635000EB40FC /* Main.storyboard */,
 				FF52DFAE23C895DE00765050 /* ControlsViewController.swift */,
+				FF52DFB023C8AEAD00765050 /* ChargeViewController.swift */,
 				FFC8642023C8829600EB40FC /* ClimateViewController.swift */,
 				FFC8641E23C86DEA00EB40FC /* RootTableViewController.swift */,
 				FFC863F723C8635100EB40FC /* Assets.xcassets */,
@@ -269,6 +272,7 @@
 				FFC863EF23C8635000EB40FC /* AppDelegate.swift in Sources */,
 				FFC863F123C8635000EB40FC /* SceneDelegate.swift in Sources */,
 				FF52DFAF23C895DE00765050 /* ControlsViewController.swift in Sources */,
+				FF52DFB123C8AEAD00765050 /* ChargeViewController.swift in Sources */,
 				FFC8641F23C86DEA00EB40FC /* RootTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

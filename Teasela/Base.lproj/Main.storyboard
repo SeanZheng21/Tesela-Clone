@@ -292,6 +292,9 @@
                                                 <constraint firstItem="wuF-o2-91F" firstAttribute="leading" secondItem="Nxh-FM-ZxI" secondAttribute="leading" constant="20" symbolic="YES" id="xcV-pD-s7E"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="FXy-X4-zjX" kind="show" id="J1D-GC-ni9"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="ACU-Uo-csV">
                                         <rect key="frame" x="0.0" y="714" width="414" height="70"/>
@@ -470,7 +473,79 @@
             </objects>
             <point key="canvasLocation" x="1992.753623188406" y="138.61607142857142"/>
         </scene>
-        <!--Controls View Controller-->
+        <!--Charging View Controller-->
+        <scene sceneID="jbb-hp-dNb">
+            <objects>
+                <viewController id="FXy-X4-zjX" userLabel="Charging View Controller" customClass="ChargeViewController" customModule="Teasela" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IUC-7F-Vb0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="144" translatesAutoresizingMaskIntoConstraints="NO" id="v4n-iL-GSE">
+                                <rect key="frame" x="73" y="276" width="268" height="344.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="iI3-rQ-TcD" userLabel="Mile Battery Stack View">
+                                        <rect key="frame" x="3" y="0.0" width="262" height="154.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTC-3m-L1E">
+                                                <rect key="frame" x="87.5" y="0.0" width="87" height="33.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xAO-6k-5zN" userLabel="Battery Stack View">
+                                                <rect key="frame" x="0.0" y="83.5" width="262" height="71"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battery 0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccc-Gy-Zfd">
+                                                        <rect key="frame" x="51" y="0.0" width="160" height="41"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="avB-g9-duy">
+                                                        <rect key="frame" x="-2" y="41" width="266" height="31"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Lnp-Sa-8gq"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <action selector="batterySliderSlided:" destination="FXy-X4-zjX" eventType="valueChanged" id="nKb-fp-oaF"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sd5-9g-X0G">
+                                        <rect key="frame" x="0.0" y="298.5" width="268" height="46"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="OPEN CHARGE PORT"/>
+                                        <connections>
+                                            <action selector="openChargePortTouched:" destination="FXy-X4-zjX" eventType="touchUpInside" id="vvB-Ax-kXd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="v4n-iL-GSE" firstAttribute="centerY" secondItem="IUC-7F-Vb0" secondAttribute="centerY" id="Hpt-cY-P9i"/>
+                            <constraint firstItem="v4n-iL-GSE" firstAttribute="centerX" secondItem="IUC-7F-Vb0" secondAttribute="centerX" id="Hso-uS-pcE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cm6-LK-FlX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CHARGING" id="02H-na-8iC"/>
+                    <connections>
+                        <outlet property="batteryLabel" destination="Ccc-Gy-Zfd" id="N2T-kx-lJx"/>
+                        <outlet property="batterySlider" destination="avB-g9-duy" id="0KB-7L-gE9"/>
+                        <outlet property="milesLabel" destination="pTC-3m-L1E" id="da0-If-bvQ"/>
+                        <outlet property="openChargePortButton" destination="sd5-9g-X0G" id="nPR-GB-zBH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XcY-SD-gon" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3051" y="428"/>
+        </scene>
+        <!--CONTROLS-->
         <scene sceneID="DsJ-gR-8w2">
             <objects>
                 <viewController id="mHq-my-bM6" customClass="ControlsViewController" customModule="Teasela" customModuleProvider="target" sceneMemberID="viewController">
@@ -769,7 +844,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0fw-Xl-1cu"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bAA-Em-DAY"/>
+                    <navigationItem key="navigationItem" title="CONTROLS" id="bAA-Em-DAY"/>
                     <connections>
                         <outlet property="lcokUnlockButton" destination="XOu-M3-Mwx" id="tN8-15-DX6"/>
                         <outlet property="lockImage" destination="AHH-ga-a4H" id="TgG-jz-DV7"/>
@@ -778,7 +853,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ao8-gC-vAp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2930.434782608696" y="411.83035714285711"/>
+            <point key="canvasLocation" x="4138" y="-107"/>
         </scene>
         <!--Climate View Controller-->
         <scene sceneID="Cvl-4o-fWf">
@@ -853,7 +928,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KH8-NH-l5j"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SCC-xh-tcq"/>
+                    <navigationItem key="navigationItem" title="TEMPERATURE CONTROL" id="SCC-xh-tcq"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="jwm-YD-sl2" id="Xgh-GW-51H"/>
                         <outlet property="intTempLabel" destination="95s-Bg-hnj" id="b8j-hh-PW5"/>
@@ -863,7 +938,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JrP-hm-9BJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2939" y="-287"/>
+            <point key="canvasLocation" x="3052" y="-334"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="af9-AN-fmQ">
