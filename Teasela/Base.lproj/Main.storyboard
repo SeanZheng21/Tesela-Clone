@@ -338,6 +338,9 @@
                                                 <constraint firstItem="Ayn-yv-Wiu" firstAttribute="centerY" secondItem="hYE-1e-im5" secondAttribute="centerY" id="Y8Q-BS-lGL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="lx2-wX-0RA" kind="show" id="jCW-kP-dAD"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="rKP-yR-KbJ">
                                         <rect key="frame" x="0.0" y="784" width="414" height="70"/>
@@ -543,12 +546,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcY-SD-gon" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3051" y="428"/>
+            <point key="canvasLocation" x="2052" y="917"/>
         </scene>
-        <!--CONTROLS-->
+        <!--Location View Controller-->
+        <scene sceneID="ZoE-qj-0Zm">
+            <objects>
+                <viewController id="lx2-wX-0RA" customClass="LocationViewController" customModule="Teasela" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PnL-Sv-cjj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cG2-bM-OEB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="788"/>
+                                <connections>
+                                    <outlet property="delegate" destination="lx2-wX-0RA" id="64E-ag-eVn"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cG2-bM-OEB" secondAttribute="bottom" constant="20" symbolic="YES" id="48a-cm-c3Q"/>
+                            <constraint firstItem="cG2-bM-OEB" firstAttribute="top" secondItem="WDa-1N-lPQ" secondAttribute="top" id="hHx-VA-4v8"/>
+                            <constraint firstItem="cG2-bM-OEB" firstAttribute="leading" secondItem="WDa-1N-lPQ" secondAttribute="leading" id="iK7-au-J83"/>
+                            <constraint firstItem="cG2-bM-OEB" firstAttribute="trailing" secondItem="WDa-1N-lPQ" secondAttribute="trailing" id="s0G-jh-u2u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WDa-1N-lPQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x6F-Ow-vlp"/>
+                    <connections>
+                        <outlet property="mapView" destination="cG2-bM-OEB" id="A3T-ET-r1S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Jp-tQ-Yxo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2782.608695652174" y="916.74107142857133"/>
+        </scene>
+        <!--Controls View Controller-->
         <scene sceneID="DsJ-gR-8w2">
             <objects>
-                <viewController id="mHq-my-bM6" customClass="ControlsViewController" customModule="Teasela" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mHq-my-bM6" userLabel="Controls View Controller" customClass="ControlsViewController" customModule="Teasela" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bDN-JD-ye0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -853,7 +889,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ao8-gC-vAp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4138" y="-107"/>
+            <point key="canvasLocation" x="1342" y="917"/>
         </scene>
         <!--Climate View Controller-->
         <scene sceneID="Cvl-4o-fWf">
@@ -938,7 +974,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JrP-hm-9BJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3052" y="-334"/>
+            <point key="canvasLocation" x="591" y="917"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="af9-AN-fmQ">
