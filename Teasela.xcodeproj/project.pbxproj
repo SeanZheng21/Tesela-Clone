@@ -11,6 +11,8 @@
 		FF52DFB123C8AEAD00765050 /* ChargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52DFB023C8AEAD00765050 /* ChargeViewController.swift */; };
 		FF52DFB323C8BDCC00765050 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52DFB223C8BDCC00765050 /* LocationViewController.swift */; };
 		FF52DFB523C8CCC300765050 /* SummonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52DFB423C8CCC300765050 /* SummonViewController.swift */; };
+		FFB24F4923C9E1CC00407038 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB24F4823C9E1CC00407038 /* ServiceViewController.swift */; };
+		FFB24F4B23C9F10400407038 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB24F4A23C9F10400407038 /* ServiceTableViewCell.swift */; };
 		FFC863EF23C8635000EB40FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC863EE23C8635000EB40FC /* AppDelegate.swift */; };
 		FFC863F123C8635000EB40FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC863F023C8635000EB40FC /* SceneDelegate.swift */; };
 		FFC863F623C8635000EB40FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC863F423C8635000EB40FC /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 		FF52DFB023C8AEAD00765050 /* ChargeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeViewController.swift; sourceTree = "<group>"; };
 		FF52DFB223C8BDCC00765050 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		FF52DFB423C8CCC300765050 /* SummonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonViewController.swift; sourceTree = "<group>"; };
+		FFB24F4823C9E1CC00407038 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		FFB24F4A23C9F10400407038 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		FFC863EB23C8635000EB40FC /* Teasela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teasela.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC863EE23C8635000EB40FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC863F023C8635000EB40FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				FFC863EE23C8635000EB40FC /* AppDelegate.swift */,
 				FFC863F023C8635000EB40FC /* SceneDelegate.swift */,
 				FFC863F423C8635000EB40FC /* Main.storyboard */,
+				FFB24F4A23C9F10400407038 /* ServiceTableViewCell.swift */,
+				FFB24F4823C9E1CC00407038 /* ServiceViewController.swift */,
 				FF52DFB423C8CCC300765050 /* SummonViewController.swift */,
 				FF52DFB223C8BDCC00765050 /* LocationViewController.swift */,
 				FF52DFAE23C895DE00765050 /* ControlsViewController.swift */,
@@ -281,7 +287,9 @@
 				FFC863F123C8635000EB40FC /* SceneDelegate.swift in Sources */,
 				FF52DFAF23C895DE00765050 /* ControlsViewController.swift in Sources */,
 				FF52DFB123C8AEAD00765050 /* ChargeViewController.swift in Sources */,
+				FFB24F4B23C9F10400407038 /* ServiceTableViewCell.swift in Sources */,
 				FFC8641F23C86DEA00EB40FC /* RootTableViewController.swift in Sources */,
+				FFB24F4923C9E1CC00407038 /* ServiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
