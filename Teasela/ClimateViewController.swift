@@ -36,12 +36,12 @@ class ClimateViewController: UIViewController {
     // MARK: - Setters
     @IBAction func turnOnOffTouched(_ sender: UIButton) {
         setEnableControl(to: !enableClimateControl)
-        backgroundImageView.image = UIImage(named: "Climate Background" + (enableClimateControl ? " Enabled" : ""))
     }
     
     func setEnableControl(to enable: Bool) {
         enableClimateControl = enable;
         onOffButton.setTitle(( enable ?  "TURN OFF" : "TURN ON"), for: .normal)
+        backgroundImageView.image = UIImage(named: "Climate Background" + (enable ? " Enabled" : ""))
     }
     
     @IBAction func touchMinusTemperature(_ sender: UIButton) {
