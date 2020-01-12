@@ -12,7 +12,10 @@ class SummonViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        overrideUserInterfaceStyle = .dark
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
         // Do any additional setup after loading the view.
         initializeSummon()
     }

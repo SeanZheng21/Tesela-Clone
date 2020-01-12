@@ -18,7 +18,10 @@ class ChargeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        overrideUserInterfaceStyle = .dark
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
         // Do any additional setup after loading the view.
         setFullRange(to: ChargeViewController.DEFAULT_FULL_RANGE)
         setBatteryPercentage(to: 0.52)
