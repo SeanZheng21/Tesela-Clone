@@ -14,7 +14,7 @@ class ServiceViewController: UIViewController, UITableViewDelegate, UITableViewD
     private static let faqURL = "https://www.tesla.com/support/frequently-asked-questions"
     private static let searchBaseURL = "https://www.tesla.com/support/results#q="
     
-    private var keywords: String = ""
+    private var keywords = Set<String>()
 
     private var services: [String] = ["12v Battery", "Accessory Installation & Upgrades", "Alert Appeared",
         "Audio, Infotainment & Touchscreen", "Door Handles & Trunk Latches", "Driver Assistance Features",
@@ -37,7 +37,16 @@ class ServiceViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBAction func nextButtonTouched(_ sender: UIButton) {
-        showSafariVC(for: ServiceViewController.searchBaseURL + keywords.replacingOccurrences(of: " ", with: "%20"))
+        // Generate a keywords string, seperated by comma
+        var allKeywords = ""
+        for kwd in keywords {
+            allKeywords += kwd
+            allKeywords += ", "
+        }
+        allKeywords = String(allKeywords.prefix(allKeywords.count - 2)).replacingOccurrences(of: " ", with: "%20")
+            .replacingOccurrences(of: "&", with: "and")
+        print(allKeywords)
+        showSafariVC(for: ServiceViewController.searchBaseURL + allKeywords)
     }
     
     @IBAction func visitFAQButtonTouched(_ sender: UIButton) {
@@ -69,14 +78,13 @@ class ServiceViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK: - Table View Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        keywords += services[indexPath.row]
-        keywords += ", "
-        let cell = tableView.dequeueReusableCell(withIdentifier: "serviceCell", for: indexPath) as! ServiceTableViewCell
-        if cell.isChecked() {
-            cell.uncheckService()
-        } else {
-            cell.checkService()
-        }
+        keywords.insert(services[indexPath.row])
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "serviceCell", for: indexPath) as! ServiceTableViewCell
+//        cell.uncheckService()
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        keywords.remove(services[indexPath.row])
     }
     
     

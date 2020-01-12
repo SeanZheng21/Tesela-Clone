@@ -19,24 +19,27 @@ class ServiceTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-        if isChecked() {
-            uncheckService()
-        } else {
+        if selected {
             checkService()
+        } else {
+            uncheckService()
         }
     }
+    
     
     @IBOutlet weak var checkboxImageView: UIImageView!
     @IBOutlet weak var serviceNameLabel: UILabel!
     private var checked: Bool = false
     
     func checkService() -> Void {
+        print("Checking the service")
         checkboxImageView.image = UIImage(named: "Tick")
         checked = true
     }
     
     func uncheckService() -> Void {
-        checkboxImageView.image = nil
+        print("Unchecking the service")
+        checkboxImageView.image = UIImage(named: "Tick No")
         checked = false
     }
     
@@ -47,5 +50,12 @@ class ServiceTableViewCell: UITableViewCell {
     func setServiceName(to name: String) -> Void {
         serviceNameLabel.text = name
     }
-
+    
+    func toggleCheck() -> Void {
+        if (checked) {
+            uncheckService()
+        } else {
+            checkService()
+        }
+    }
 }
