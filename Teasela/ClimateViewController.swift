@@ -15,6 +15,7 @@ class ClimateViewController: UIViewController {
     private static var DEFAULT_INTERIOR_TEMP = 72
     private var interiorTemp: Int = ClimateViewController.DEFAULT_INTERIOR_TEMP
     private var enableClimateControl: Bool = true
+    private var heatLevels: [Int] = [0, 0 ,0, 0, 0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class ClimateViewController: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         
         // Do any additional setup after loading the view.
+        heatLevels = [0, 0 ,0, 0, 0]
         setEnableControl(to: true)
         setTemperature(to: ClimateViewController.DEFAULT_TEMP)
         setInteriorTemperature(to: ClimateViewController.DEFAULT_INTERIOR_TEMP)
@@ -68,7 +70,44 @@ class ClimateViewController: UIViewController {
         intTempLabel.text = "Interior \(intTemp)°F"
     }
     
-
+    // MARK: - Seats
+    
+    private func increaseHeat(on idx: Int, of seatButton: UIButton) -> Void {
+        let level: Int
+        if heatLevels[idx] < 3 {
+            level = heatLevels[idx] + 1
+        } else {
+            level = 0
+        }
+        heatLevels[idx] = level
+        seatButton.setBackgroundImage(UIImage(named: "Heat \(level)"), for: .normal)
+    }
+    
+    @IBOutlet weak var seatOneButton: UIButton!
+    @IBOutlet weak var seatTwoButton: UIButton!
+    @IBOutlet weak var seatThreeButton: UIButton!
+    @IBOutlet weak var seatFourButton: UIButton!
+    @IBOutlet weak var seatFiveButton: UIButton!
+    
+    @IBAction func seatOneTouched(_ sender: UIButton) {
+        increaseHeat(on: 0, of: sender)
+    }
+    
+    @IBAction func seatTwoTouched(_ sender: UIButton) {
+        increaseHeat(on: 1, of: sender)
+    }
+    
+    @IBAction func seatThreeTouched(_ sender: UIButton) {
+        increaseHeat(on: 2, of: sender)
+    }
+    
+    @IBAction func seatFourTouched(_ sender: UIButton) {
+        increaseHeat(on: 3, of: sender)
+    }
+    
+    @IBAction func seatFiveTouched(_ sender: UIButton) {
+        increaseHeat(on: 4, of: sender)
+    }
     /*
     // MARK: - Navigation
 
