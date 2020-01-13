@@ -11,6 +11,8 @@
 		FF52DFB123C8AEAD00765050 /* ChargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52DFB023C8AEAD00765050 /* ChargeViewController.swift */; };
 		FF52DFB323C8BDCC00765050 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52DFB223C8BDCC00765050 /* LocationViewController.swift */; };
 		FF52DFB523C8CCC300765050 /* SummonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52DFB423C8CCC300765050 /* SummonViewController.swift */; };
+		FF8545DF23CCB30E0015401F /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8545DE23CCB30E0015401F /* Vehicle.swift */; };
+		FF8545E123CCB3AC0015401F /* VehicleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8545E023CCB3AC0015401F /* VehicleFactory.swift */; };
 		FFB24F4923C9E1CC00407038 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB24F4823C9E1CC00407038 /* ServiceViewController.swift */; };
 		FFB24F4B23C9F10400407038 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB24F4A23C9F10400407038 /* ServiceTableViewCell.swift */; };
 		FFC863EF23C8635000EB40FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC863EE23C8635000EB40FC /* AppDelegate.swift */; };
@@ -46,6 +48,8 @@
 		FF52DFB023C8AEAD00765050 /* ChargeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeViewController.swift; sourceTree = "<group>"; };
 		FF52DFB223C8BDCC00765050 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		FF52DFB423C8CCC300765050 /* SummonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonViewController.swift; sourceTree = "<group>"; };
+		FF8545DE23CCB30E0015401F /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		FF8545E023CCB3AC0015401F /* VehicleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleFactory.swift; sourceTree = "<group>"; };
 		FFB24F4823C9E1CC00407038 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		FFB24F4A23C9F10400407038 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		FFC863EB23C8635000EB40FC /* Teasela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teasela.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,9 +128,11 @@
 				FF52DFB023C8AEAD00765050 /* ChargeViewController.swift */,
 				FFC8642023C8829600EB40FC /* ClimateViewController.swift */,
 				FFC8641E23C86DEA00EB40FC /* RootTableViewController.swift */,
+				FF8545DE23CCB30E0015401F /* Vehicle.swift */,
 				FFC863F723C8635100EB40FC /* Assets.xcassets */,
 				FFC863F923C8635100EB40FC /* LaunchScreen.storyboard */,
 				FFC863FC23C8635100EB40FC /* Info.plist */,
+				FF8545E023CCB3AC0015401F /* VehicleFactory.swift */,
 			);
 			path = Teasela;
 			sourceTree = "<group>";
@@ -288,8 +294,10 @@
 				FF52DFAF23C895DE00765050 /* ControlsViewController.swift in Sources */,
 				FF52DFB123C8AEAD00765050 /* ChargeViewController.swift in Sources */,
 				FFB24F4B23C9F10400407038 /* ServiceTableViewCell.swift in Sources */,
+				FF8545DF23CCB30E0015401F /* Vehicle.swift in Sources */,
 				FFC8641F23C86DEA00EB40FC /* RootTableViewController.swift in Sources */,
 				FFB24F4923C9E1CC00407038 /* ServiceViewController.swift in Sources */,
+				FF8545E123CCB3AC0015401F /* VehicleFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreLocation
 
 class RootTableViewController: UITableViewController {
+    
+    private var vehicle: Vehicle = Vehicle()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,7 @@ class RootTableViewController: UITableViewController {
         lockButton.layer.cornerRadius = lockButton.bounds.size.width
         
         updatePhoneKeyStatus()
+        initVehicle()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,9 +39,21 @@ class RootTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    @IBOutlet weak var batteryTitleLabel: UILabel!
+    @IBOutlet weak var rangeTitleLabel: UILabel!
+    @IBOutlet weak var parkedTitleLabel: UILabel!
+    
+    
     @IBOutlet weak var fanButton: UIButton!
     @IBOutlet weak var frunkButton: UIButton!
     @IBOutlet weak var lockButton: UIButton!
+    
+    @IBOutlet weak var climateLabel: UILabel!
+    @IBOutlet weak var controlsLabel: UILabel!
+    @IBOutlet weak var chargingLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var summonLabel: UILabel!
     
     // MARK: - Phone Key
     private var blueToothEnabled: Bool = false
@@ -59,6 +75,33 @@ class RootTableViewController: UITableViewController {
 
             self.present(alert, animated: true)
         }
+    }
+    
+    
+    private func initVehicle() -> Void {
+        vehicle = VehicleFactory.getVehicle()
+        navigationBar.title = vehicle.getName()
+        climateLabel.text = "Interior \(vehicle.getTemperature())°F"
+        if vehicle.isEnableValet() {
+            controlsLabel.text = "Valet Mode Active"
+        } else if vehicle.isEnableSentry() {
+            controlsLabel.text = "Sentry Mode Active"
+        } else if vehicle.isEnableSpeedLimit() {
+            controlsLabel.text = "Speed Limit Mode Active"
+        } else {
+            controlsLabel.text = "No Active Mode"
+        }
+        chargingLabel.text = vehicle.isCharging() ? "Charging" : "Not Charging"
+        if let locDesc = vehicle.getLocation() {
+            locationLabel.text = "\(locDesc.coordinate.latitude)° N, \(locDesc.coordinate.longitude)° W"
+        } else {
+            locationLabel.text = "Unavailable"
+        }
+        summonLabel.text = vehicle.isSummonAvailable(from: CLLocation(latitude: 40.7580, longitude: 73.9855)) ? "Available" : "Unavailable"
+        batteryTitleLabel.text = "Battery: \(Int(round(vehicle.getBattery() * 100)))%"
+        rangeTitleLabel.text = "\(vehicle.getMileLeft()) mi"
+        parkedTitleLabel.text = vehicle.isParked() ? "Parked" : ""
+        
     }
     
     /**
