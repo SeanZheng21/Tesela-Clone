@@ -26,6 +26,8 @@ class RootTableViewController: UITableViewController {
         lockButton.layer.borderColor = UIColor.white.cgColor
         lockButton.layer.borderWidth = 2
         lockButton.layer.cornerRadius = lockButton.bounds.size.width
+        
+        updatePhoneKeyStatus()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -37,6 +39,44 @@ class RootTableViewController: UITableViewController {
     @IBOutlet weak var frunkButton: UIButton!
     @IBOutlet weak var lockButton: UIButton!
     
+    // MARK: - Phone Key
+    private var blueToothEnabled: Bool = false
+    @IBOutlet weak var phoneKeyDetailLabel: UILabel!
+    @IBOutlet weak var phoneKeyButton: UIButton!
+    @IBAction func phoneKeyTouched(_ sender: UIButton) {
+        if blueToothEnabled {
+            let alert = UIAlertController(title: "Phone Key Enabled", message: "Now you can use your phone as the key to your car", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+        } else {
+            let alert = UIAlertController(title: "Bluetooth is off", message: "Bluetooth is needed for Phone Key. Go to Settings to turn on bluetooth.", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Settings", style: .default, handler: { action in
+                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+            self.present(alert, animated: true)
+        }
+    }
+    
+    /**
+     Check the bluetooth status and try to connect
+     */
+    func updatePhoneKeyStatus() -> Void {
+
+        let bluetoothOn: Bool = Bool.random()
+        blueToothEnabled = bluetoothOn
+        if bluetoothOn {
+            phoneKeyDetailLabel.text = "Connected"
+            phoneKeyButton.setBackgroundImage(UIImage(named: "info.circle"), for: .normal)
+        } else {
+            phoneKeyDetailLabel.text = "Bluetooth off"
+            phoneKeyButton.setBackgroundImage(UIImage(named: "info.circle"), for: .normal)
+
+        }
+    }
 
     // MARK: - Table view data source
     /*

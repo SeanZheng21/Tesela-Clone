@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--APOLLO-->
+        <!--Root Table View Controller-->
         <scene sceneID="Om3-yP-Pbl">
             <objects>
-                <tableViewController id="TjE-iT-kEd" customClass="RootTableViewController" customModule="Teasela" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="TjE-iT-kEd" userLabel="Root Table View Controller" customClass="RootTableViewController" customModule="Teasela" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GDB-rb-PdF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,10 +169,27 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KO7-Wy-VeJ">
+                                                    <rect key="frame" x="358" y="20.5" width="30" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="5zs-kf-tAE"/>
+                                                        <constraint firstAttribute="width" secondItem="KO7-Wy-VeJ" secondAttribute="height" multiplier="1:1" id="qPr-Wl-Hof"/>
+                                                    </constraints>
+                                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" image="info.circle" catalog="system" backgroundImage="info.circle">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="phoneKeyTouched:" destination="TjE-iT-kEd" eventType="touchUpInside" id="LPU-dc-BcP"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Qn2-0z-iag" firstAttribute="centerY" secondItem="CXh-WG-iUu" secondAttribute="centerY" id="INN-Vc-KB7"/>
                                                 <constraint firstItem="Qn2-0z-iag" firstAttribute="leading" secondItem="CXh-WG-iUu" secondAttribute="leading" constant="20" symbolic="YES" id="LGU-HU-Gl2"/>
+                                                <constraint firstAttribute="trailing" secondItem="KO7-Wy-VeJ" secondAttribute="trailing" constant="26" id="Rad-FO-ba4"/>
+                                                <constraint firstItem="KO7-Wy-VeJ" firstAttribute="centerY" secondItem="CXh-WG-iUu" secondAttribute="centerY" id="svE-94-sVO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -558,6 +575,8 @@
                         <outlet property="fanButton" destination="Afm-oz-z5b" id="eSS-vf-Bda"/>
                         <outlet property="frunkButton" destination="BQZ-lP-6eB" id="0S3-ul-D6V"/>
                         <outlet property="lockButton" destination="14H-vI-ZmE" id="3Rw-if-luR"/>
+                        <outlet property="phoneKeyButton" destination="KO7-Wy-VeJ" id="rNo-az-6UH"/>
+                        <outlet property="phoneKeyDetailLabel" destination="u6Y-Sw-XHe" id="R0e-J9-49f"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JiN-ZR-lHJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1382,6 +1401,7 @@
         <image name="Trunk" width="154" height="168"/>
         <image name="Unlocked" width="122" height="122"/>
         <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="info.circle" catalog="system" width="64" height="60"/>
         <image name="paperplane" catalog="system" width="64" height="60"/>
     </resources>
 </document>
