@@ -10,12 +10,7 @@ import UIKit
 
 class ClimateViewController: UIViewController {
 
-    private static var DEFAULT_TEMP = 72
-    private var temperature: Int = ClimateViewController.DEFAULT_TEMP
-    private static var DEFAULT_INTERIOR_TEMP = 72
-    private var interiorTemp: Int = ClimateViewController.DEFAULT_INTERIOR_TEMP
-    private var enableClimateControl: Bool = true
-    private var heatLevels: [Int] = [0, 0 ,0, 0, 0]
+    private var vehicle: Vehicle = Vehicle()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +19,8 @@ class ClimateViewController: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         
         // Do any additional setup after loading the view.
-        heatLevels = [0, 0 ,0, 0, 0]
-        setEnableControl(to: true)
-        setTemperature(to: ClimateViewController.DEFAULT_TEMP)
-        setInteriorTemperature(to: ClimateViewController.DEFAULT_INTERIOR_TEMP)
+        updateOutletsFromVehicle()
     }
-    
-    // TODO: Seat heat levels
     
     // MARK: - Outlets
     @IBOutlet weak var intTempLabel: UILabel!
@@ -39,48 +29,77 @@ class ClimateViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     
     // MARK: - Setters
+    private func updateOutletsFromVehicle() -> Void {
+        setEnableControl(to: vehicle.isEnableClimateControl())
+        setTemperature(to: vehicle.getTemperature())
+        setInteriorTemperature(to: vehicle.getInteriorTemperature())
+        setEnableControl(to: vehicle.isEnableClimateControl())
+        setHeatLevels(vehicle.getHeatLevels())
+    }
+    
+    
     @IBAction func turnOnOffTouched(_ sender: UIButton) {
-        setEnableControl(to: !enableClimateControl)
+        setEnableControl(to: !vehicle.isEnableClimateControl())
     }
     
     func setEnableControl(to enable: Bool) {
-        enableClimateControl = enable;
+        vehicle.setEnableClimateControl(to: enable)
         onOffButton.setTitle(( enable ?  "TURN OFF" : "TURN ON"), for: .normal)
         backgroundImageView.image = UIImage(named: "Climate Background" + (enable ? " Enabled" : ""))
     }
     
     @IBAction func touchMinusTemperature(_ sender: UIButton) {
-        setTemperature(to: temperature - 1)
+        setTemperature(to: vehicle.getTemperature() - 1)
     }
     
     @IBAction func touchPlusTemperature(_ sender: UIButton) {
-        setTemperature(to: temperature + 1)
+        setTemperature(to: vehicle.getTemperature() + 1)
     }
     
     private func setTemperature(to temp: Int) {
-        temperature = temp
-        temperatureLabel.text = "\(temperature)°F"
-        
-        // Set interior temperature too, maybe change later
-        setInteriorTemperature(to: temp)
+        vehicle.setTemperature(to: temp)
+        temperatureLabel.text = "\(temp)°F"
     }
     
     private func setInteriorTemperature(to intTemp: Int) {
-        interiorTemp = intTemp
+        vehicle.setInteriorTemperature(to: intTemp)
         intTempLabel.text = "Interior \(intTemp)°F"
+    }
+    
+    func setVehicle(to vehicle: Vehicle) -> Void {
+        self.vehicle = vehicle
     }
     
     // MARK: - Seats
     
     private func increaseHeat(on idx: Int, of seatButton: UIButton) -> Void {
         let level: Int
-        if heatLevels[idx] < 3 {
-            level = heatLevels[idx] + 1
+        if vehicle.getHeatLevel(of: idx)! < 3 {
+            level = vehicle.getHeatLevel(of: idx)! + 1
         } else {
             level = 0
         }
-        heatLevels[idx] = level
+        setHeat(on: idx, to: level)
+//        print(seatButton.state)
+//        print("Setting heat level\(idx) to \(level)")
         seatButton.setBackgroundImage(UIImage(named: "Heat \(level)"), for: .normal)
+    }
+    
+    func setHeat(on idx: Int, to level: Int) -> Void {
+        vehicle.setHeatLevel(of: idx, to: level)
+    }
+    
+    func setHeatLevels(_ levels: [Int]) -> Void {
+        setHeat(on: 0, to: levels[0])
+        seatOneButton.setBackgroundImage(UIImage(named: "Heat \(levels[0])"), for: .normal)
+        setHeat(on: 1, to: levels[1])
+        seatTwoButton.setBackgroundImage(UIImage(named: "Heat \(levels[1])"), for: .normal)
+        setHeat(on: 2, to: levels[2])
+        seatThreeButton.setBackgroundImage(UIImage(named: "Heat \(levels[2])"), for: .normal)
+        setHeat(on: 3, to: levels[3])
+        seatFourButton.setBackgroundImage(UIImage(named: "Heat \(levels[3])"), for: .normal)
+        setHeat(on: 4, to: levels[4])
+        seatFiveButton.setBackgroundImage(UIImage(named: "Heat \(levels[4])"), for: .normal)
     }
     
     @IBOutlet weak var seatOneButton: UIButton!

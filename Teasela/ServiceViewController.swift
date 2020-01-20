@@ -15,6 +15,7 @@ class ServiceViewController: UIViewController, UITableViewDelegate, UITableViewD
     private static let searchBaseURL = "https://www.tesla.com/support/results#q="
     
     private var keywords = Set<String>()
+    private var vehicle: Vehicle = Vehicle()
 
     private var services: [String] = ["12v Battery", "Accessory Installation & Upgrades", "Alert Appeared",
         "Audio, Infotainment & Touchscreen", "Door Handles & Trunk Latches", "Driver Assistance Features",
@@ -65,6 +66,10 @@ class ServiceViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         let safariVC = SFSafariViewController(url: url)
         present(safariVC, animated: true)
+    }
+    
+    func setVehicle(to vehicle: Vehicle) -> Void {
+        self.vehicle = vehicle
     }
     
     // MARK: - Table View Data Source

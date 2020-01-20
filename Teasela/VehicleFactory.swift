@@ -11,7 +11,7 @@ import CoreLocation
 
 class VehicleFactory {
     
-    private static var INSTANCE: Vehicle = Vehicle(name: "Meredith", temperature: 60, valet: false, sentry: true, speedLimit: false, limit: 85, charging: false, location: CLLocation(latitude: 40.7580, longitude: 73.9855), battery: 0.5, fullRange: 300, currentSpeed: 0.0);
+    private static var INSTANCE: Vehicle = Vehicle(name: "Meredith", temperature: 60, enableClimateControl: true, valet: false, sentry: true, speedLimit: false, limit: 85, charging: false, location: CLLocation(latitude: 40.7580, longitude: 73.9855), battery: 0.5, fullRange: 300, currentSpeed: 0.0);
     
     private init() {
     }

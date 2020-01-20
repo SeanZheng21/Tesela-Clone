@@ -183,14 +183,45 @@ class RootTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(vehicle.toString())
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "serviceSegue":
+                if let serviceVC = segue.destination as? ServiceViewController {
+                    serviceVC.setVehicle(to: vehicle)
+                }
+            case "climateSegue":
+                if let climateVC = segue.destination as? ClimateViewController {
+                    climateVC.setVehicle(to: vehicle)
+                }
+            case "controlsSegue":
+                if let controlsVC = segue.destination as? ControlsViewController {
+                    print("segue")
+                }
+            case "chargingSegue":
+                if let chargingVC = segue.destination as? ChargeViewController {
+                    print("segue")
+                }
+            case "locationSegue":
+                if let locationVC = segue.destination as? LocationViewController {
+                    print("segue")
+                }
+            case "summonSegue":
+                if let summonVC = segue.destination as? SummonViewController {
+                    print("segue")
+                }
+            default:
+                print("Unknown segue identifier: \(identifier)")
+            }
+        }
     }
-    */
+    
 
 }
