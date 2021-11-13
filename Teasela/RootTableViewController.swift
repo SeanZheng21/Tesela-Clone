@@ -202,19 +202,19 @@ class RootTableViewController: UITableViewController {
                     climateVC.setVehicle(to: vehicle)
                 }
             case "controlsSegue":
-                if let controlsVC = segue.destination as? ControlsViewController {
+                if segue.destination is ControlsViewController {
                     print("segue")
                 }
             case "chargingSegue":
-                if let chargingVC = segue.destination as? ChargeViewController {
+                if segue.destination is ChargeViewController {
                     print("segue")
                 }
             case "locationSegue":
-                if let locationVC = segue.destination as? LocationViewController {
+                if segue.destination is LocationViewController {
                     print("segue")
                 }
             case "summonSegue":
-                if let summonVC = segue.destination as? SummonViewController {
+                if segue.destination is SummonViewController {
                     print("segue")
                 }
             default:
